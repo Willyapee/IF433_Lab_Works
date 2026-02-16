@@ -1,0 +1,25 @@
+package oop_00000115707_williamasabha.week03
+
+class Player(val username: String) {
+    private var xp: Int = 0
+
+    val level: Int
+        get() {
+            return (xp / 100) + 1
+        }
+
+    fun addXp(amount: Int) {
+        if (amount < 0) {
+            println("ERROR: $amount is negative!")
+            return
+        }
+
+        val oldLevel = level
+        xp += amount
+        val newLevel = level
+
+        if (newLevel > oldLevel) {
+            println("Level Up! Selamat $username naik ke level $level")
+        }
+    }
+}
