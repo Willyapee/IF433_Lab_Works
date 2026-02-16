@@ -5,5 +5,4 @@ fun main() {
     wep.dmg = -50
     wep.dmg = 1000
     println("Tier = ${wep.tier}, damage dealt = ${wep.dmg}")
-
 }
