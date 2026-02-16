@@ -15,10 +15,13 @@ class Employee(val name: String) {
 
     fun increasePerformance(){
         performanceRating++
-        println("Kinerja $name meningkat! Rating:: $performanceRating")
+        println("Kinerja $name meningkat! Rating: $performanceRating")
     }
 
     fun printStatus(){
         println("Karyawan: $name, Rating: $performanceRating")
     }
+
+    val tax: Double
+        get() = salary * 0.1
 }
