@@ -4,5 +4,5 @@ fun main() {
     val eCar = ElectricCar("Tesla", 4, 90)
     eCar.accelerate()
     eCar.honk()
-    eCar.openTrunk()
+    eCar.openTrunk()    
 }
