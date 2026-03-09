@@ -1,6 +1,6 @@
 package oop_00000115707_williamasabha.week06
 
-interface CLickable {
+interface Clickable {
     val name: String
     fun click()
 }
