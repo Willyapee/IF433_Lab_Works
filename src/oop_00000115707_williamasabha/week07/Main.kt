@@ -1,5 +1,7 @@
 package oop_00000115707_williamasabha.week07
 
+import oop_00000115707_williamasabha.week07.NetworkClient.Companion.createClient
+
 fun main() {
     println("=== TEST SINGLETON ===")
     println("Status: ${DatabaseManager.connectionStatus}")
@@ -26,4 +28,12 @@ fun main() {
 
     val (userName, userAge) = data1
     println("Destructured:: $userName berumur $userAge")
+
+    println("\n=== TEST SEALED CLASS ===")
+    val response: ApiResponse = ApiResponse.Success("Data berhasil ditarik!")
+
+    val uiMessage = when(response) {
+        is ApiResponse.Success -> "Tampilkan: ${response.data}"
+        is ApiResponse.Error -> "Munculkan alert: ${response.message}"
+    }
 }
