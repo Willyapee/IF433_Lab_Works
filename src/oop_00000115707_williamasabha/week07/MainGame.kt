@@ -8,5 +8,10 @@ fun main(){
     val wep1 = Weapon.forgeStarterSword()
     println("Senjata Awal: ${wep1.item.name}")
 
+    val wep2 = wep1.item.copy(damage = 25)
 
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Kratos"))
+    processEvent(BattleState.LootDropped(wep2))
+    processEvent(BattleState.GameOver("Skill issue"))
 }
