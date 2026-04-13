@@ -9,7 +9,6 @@ fun main () {
         mapOf("id" to "X01", "name" to "Unknown", "type" to "FOOD") // Unknown type
     )
     val parser = ApiParser()
-
     for (raw in rawApiData) {
         try {
             val product = parser.parseProduct(raw)
